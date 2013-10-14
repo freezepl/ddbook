@@ -5,6 +5,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.0'
 
 gem 'devise'
+gem 'nifty-generators'
 
 group :development do
   gem 'mysql2'
@@ -47,3 +48,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "mocha", group: :test

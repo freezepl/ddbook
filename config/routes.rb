@@ -1,4 +1,5 @@
 Desdev::Application.routes.draw do
+  resources :authentications
   devise_for :users
   get "home/index"
   root :to => "home#index"
