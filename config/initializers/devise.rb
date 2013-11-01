@@ -4,7 +4,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  config.secret_key = 'adb95f5b44389fb660760adc2ab3d27fe4e53e258410b99caf89c34a9f926e0bdc24193297551cc78f336c73a2747e5fde7d84f036fb923785192b6abedee5ea'
+  config.secret_key = ENV['DEVISE_SECRET']
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -138,7 +138,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length. Default is 8..128.
-  config.password_length = 8..128
+  config.password_length = 6..128
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
@@ -232,6 +232,9 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+
+  require "omniauth-linkedin"
+  config.omniauth :linkedin, ENV['LINKEDIN_API'], ENV['LINKEDIN_SECRET'], :scope => 'r_basicprofile r_emailaddress rw_nus'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

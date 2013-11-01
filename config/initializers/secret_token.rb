@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Desdev::Application.config.secret_key_base = '83bd5d31a29921e5746d14ed3adb263aa51bce9d98dcb83ba451990a760a67e57050795adb2773bb93b5995fea83de66cb43682822302b597f452aeedb82a0bc'
+Desdev::Application.config.secret_key_base = ENV['RAILS_SECRET']
