@@ -6,6 +6,14 @@ gem 'rails', '4.0.0'
 
 gem 'devise'
 gem 'nifty-generators'
+#oauth
+gem "omniauth"
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem "omniauth-linkedin"
+gem 'twitter'
+gem 'fb_graph'
+gem "linkedin"
 
 group :development do
   gem 'mysql2'
@@ -14,6 +22,7 @@ group :development do
   gem 'awesome_print'
   gem 'sql_origin'
   gem 'hirb'
+  gem 'dotenv-rails'
 end
 
 group :production do
