@@ -4,8 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # embeds_one :user_linkedin_connection, :class_name => 'User::LinkedinConnection'
-
   has_many :authentications
 
   def apply_omniauth(omni)
@@ -18,14 +16,6 @@ class User < ActiveRecord::Base
   def password_required?
     (authentications.empty? || !password.blank?) && super
   end
-
-  # def update_with_password(params, *options)
-  #   if encrypted_password.blank?
-  #     update_attributes(params, *options)
-  #   else
-  #     super
-  #   end
-  # end
 
   def update_without_password(params={})
     params.delete(:current_password)
