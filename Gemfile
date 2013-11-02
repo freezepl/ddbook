@@ -4,15 +4,12 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.0'
 
-gem 'devise'
+gem 'devise', '~> 3.1.1'
 gem 'nifty-generators'
 #oauth
 gem "omniauth"
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem "omniauth-linkedin"
-gem 'twitter'
-gem 'fb_graph'
+gem 'omniauth-linkedin'
+gem 'omniauth-github'
 gem "linkedin"
 
 group :development do
