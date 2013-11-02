@@ -236,6 +236,9 @@ Devise.setup do |config|
   require "omniauth-linkedin"
   config.omniauth :linkedin, ENV['LINKEDIN_API'], ENV['LINKEDIN_SECRET'], :scope => 'r_basicprofile r_emailaddress rw_nus'
 
+  # require "omniauth-github"
+  config.omniauth :github, ENV['GITHUB_API'], ENV['GITHUB_SECRET'], :scope => "user:email"
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

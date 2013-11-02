@@ -10,7 +10,7 @@
       <td><%= authentication.user_id %></td>
       <td><%= authentication.provider %></td>
       <td><%= authentication.uid %></td>
-      <td><%= link_to "Destroy", authentication, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Destroy", authentication, data: { confirm: 'Are you sure?' }, :method => :delete %></td>
     </tr>
   <% end %>
 </table>

@@ -7,5 +7,5 @@
   <%= link_to "Sign up", new_user_registration_path %> |
   <%= link_to "Login", new_user_session_path %>
   <li><%= link_to "LinkedIn", user_omniauth_authorize_path(:linkedin) %></li>
-  <li><%# link_to "Facebook", user_omniauth_authorize_path(:facebook) %></li>
+  <li><%= link_to "GitHub", user_omniauth_authorize_path(:github) %></li>
 <% end %>
