@@ -13,7 +13,7 @@ gem 'omniauth-github'
 gem "linkedin"
 
 group :development do
-  gem 'mysql2'
+  gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'awesome_print'
@@ -55,5 +55,15 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+# Front-End
+# Neat bourbon.io grid
+gem 'normalize-rails'
+gem 'haml'
+gem 'bourbon'
+gem 'neat'
+gem 'html2haml'
+gem "flat-ui-rails"
 
 gem "mocha", group: :test

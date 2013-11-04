@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 #fix for devise
-DEVISE_SECRET = ENV['DEVISE_SECRET']
+# DEVISE_SECRET = ENV['DEVISE_SECRET']
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
