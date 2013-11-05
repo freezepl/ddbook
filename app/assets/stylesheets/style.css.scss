@@ -5,6 +5,10 @@ html, body {
 	height: 100%;
 }
 
+body {
+	color: #2d3135;
+}
+
 a {
 	color: #6e4d78;
 
@@ -39,6 +43,7 @@ a {
 				height: 44px;
 				border-radius: 6px;
 				margin-top: 30px;
+				color: #fff;
 
 				&.btn-primary {
 					background: #6e4d78;
@@ -54,6 +59,7 @@ a {
 					width: 70%;
 					height: 44px;
 					margin-top: 20px;
+					color: #2d3135;
 
 					&:focus {
 						outline: none;
