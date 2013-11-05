@@ -13,7 +13,8 @@ gem 'omniauth-github'
 gem "linkedin"
 
 group :development do
-  gem 'sqlite3'
+  # gem 'sqlite3'
+  gem 'mysql2'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'awesome_print'
