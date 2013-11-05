@@ -5,6 +5,14 @@ html, body {
 	height: 100%;
 }
 
+a {
+	color: #6e4d78;
+
+	&:hover {
+		color: #93739d;
+	}
+}
+
 #content {
 	min-height: 100%;
 	background: #ECF0F1;
@@ -17,27 +25,40 @@ html, body {
 			@include shift(3);
 
 			background: #fff;
-			padding: 30px;
+			padding: 40px 0;
 			border-radius: 8px;
 			margin-top: 70px;
 			text-align: center;
 
+			h2 {
+				margin-top: 0;
+			}
+
+			.btn {
+				width: 40%;
+				height: 44px;
+				border-radius: 6px;
+				margin-top: 30px;
+
+				&.btn-primary {
+					background: #6e4d78;
+
+					&:hover {
+						background: #93739d;
+					}
+				}
+			}
+
 			form {
 				input {
-					width: 80%;
+					width: 70%;
 					height: 44px;
 					margin-top: 20px;
 
 					&:focus {
-						outline: none; 
+						outline: none;
+						border-color: #6e4d78 
 					}
-				}
-
-				.btn {
-					width: 50%;
-					height: 44px;
-					border-radius: 6px;
-					margin-top: 30px;
 				}
 			}
 		}
