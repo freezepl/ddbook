@@ -1,0 +1,16 @@
+#head
+  .container
+    .logo
+      %h1= link_to "desdev", root_path
+    .navigation
+      %ul
+        - if user_signed_in?
+          Logged in as
+          = succeed "." do
+            %strong= current_user.email
+          %li= link_to 'Edit profile', edit_user_registration_path
+          %li= link_to 'Authentications', authentications_path |
+          %li= link_to "Logout", destroy_user_session_path, method: :delete
+        - else
+          %li= link_to "Sign up", new_user_registration_path
+          %li= link_to "Login", new_user_session_path

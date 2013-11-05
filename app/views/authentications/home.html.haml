@@ -1,0 +1,16 @@
+#content
+  .container
+    .form-container
+      - if user_signed_in?
+        Logged in as
+        = succeed "." do
+          %strong= current_user.email
+        = link_to 'Edit profile', edit_user_registration_path
+        = link_to 'Authentications', authentications_path
+        = link_to "Logout", destroy_user_session_path, method: :delete
+      - else
+        %h2 Welcome to desdev
+        = link_to "Sign up", new_user_registration_path, :class => "btn btn-primary btn-wide"
+        = link_to "Login", new_user_session_path, :class => "btn btn-default btn-wide"
+        / %li= link_to "LinkedIn", user_omniauth_authorize_path(:linkedin)
+        / %li= link_to "GitHub", user_omniauth_authorize_path(:github)
