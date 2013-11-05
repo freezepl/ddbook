@@ -4,6 +4,16 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  def after_sign_in_path_for(resource)
+    if resource.is_a?(User) && resource.profile_completed?
+      super
+    elsif resource.is_a?(User) && !resource.profile_completed?
+      edit_profile_url(current_user.profile)
+    else
+      redirect_to root_url
+    end
+  end
+
   protected
 
     def configure_permitted_parameters

@@ -1,9 +1,15 @@
 Desdev::Application.routes.draw do
-  resources :authentications
-  # devise_for :users
-  # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
     controllers: {omniauth_callbacks: "authentications", registrations: "registrations"}
+
+  resources :profiles, only: [:show, :update, :edit]
+  resource :users do
+    collection do
+      resources :authentications
+    end
+  end
+
   get "home/index"
   # root :to => "home#index"
   root 'authentications#home'

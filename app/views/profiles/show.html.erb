@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @profile.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @profile.last_name %>
+</p>
+
+<p>
+  <strong>Account type:</strong>
+  <%= @profile.account_type %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @profile.desc %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @profile.rate %>
+</p>
+
+<p>
+  <strong>Rate min:</strong>
+  <%= @profile.rate_min %>
+</p>
+
+<p>
+  <strong>Rate max:</strong>
+  <%= @profile.rate_max %>
+</p>
+
+<p>
+  <strong>For freelance:</strong>
+  <%= @profile.for_freelance %>
+</p>
+
+<p>
+  <strong>For hire:</strong>
+  <%= @profile.for_hire %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @profile.position %>
+</p>
+
+<p>
+  <strong>Url github:</strong>
+  <%= @profile.url_github %>
+</p>
+
+<p>
+  <strong>Url dribbble:</strong>
+  <%= @profile.url_dribbble %>
+</p>
+
+<p>
+  <strong>Url fb:</strong>
+  <%= @profile.url_fb %>
+</p>
+
+<p>
+  <strong>Url linkedin:</strong>
+  <%= @profile.url_linkedin %>
+</p>
+
+<p>
+  <strong>Url behance:</strong>
+  <%= @profile.url_behance %>
+</p>
+
+<p>
+  <strong>Url bitbucket:</strong>
+  <%= @profile.url_bitbucket %>
+</p>
+
+<p>
+  <strong>Url website:</strong>
+  <%= @profile.url_website %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

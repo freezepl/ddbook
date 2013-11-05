@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :authentications
+  has_one :profile
+
+  after_create 'create_profile'
 
   def apply_omniauth(omni)
     authentications.build(:provider => omni['provider'],

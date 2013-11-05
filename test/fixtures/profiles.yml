@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  first_name: MyString
+  last_name: MyString
+  desc: MyText
+  account_type: MyString
+  position: MyString
+  rate: MyString
+  rate_min: 1
+  rate_max: 1
+  for_freelance: false
+  for_hire: false
+  url_github: MyString
+  url_bitbucket: MyString
+  url_dribbble: MyString
+  url_fb: MyString
+  url_linkedin: MyString
+  url_behance: MyString
+  url_website: MyString
+  completed: false
+
+two:
+  user_id: 1
+  first_name: MyString
+  last_name: MyString
+  desc: MyText
+  account_type: MyString
+  position: MyString
+  rate: MyString
+  rate_min: 1
+  rate_max: 1
+  for_freelance: false
+  for_hire: false
+  url_github: MyString
+  url_bitbucket: MyString
+  url_dribbble: MyString
+  url_fb: MyString
+  url_linkedin: MyString
+  url_behance: MyString
+  url_website: MyString
+  completed: false

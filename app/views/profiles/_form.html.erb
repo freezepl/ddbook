@@ -1,0 +1,85 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :account_type %><br>
+    <%= f.text_field :account_type %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br>
+    <%= f.text_field :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :rate %><br>
+    <%= f.text_field :rate %>
+  </div>
+  <div class="field">
+    <%= f.label :rate_min %><br>
+    <%= f.text_field :rate_min %>
+  </div>
+  <div class="field">
+    <%= f.label :rate_max %><br>
+    <%= f.text_field :rate_max %>
+  </div>
+  <div class="field">
+    <%= f.label :for_freelance %><br>
+    <%= f.text_field :for_freelance %>
+  </div>
+  <div class="field">
+    <%= f.label :for_hire %><br>
+    <%= f.text_field :for_hire %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br>
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :url_github %><br>
+    <%= f.text_field :url_github %>
+  </div>
+  <div class="field">
+    <%= f.label :url_dribbble %><br>
+    <%= f.text_field :url_dribbble %>
+  </div>
+  <div class="field">
+    <%= f.label :url_fb %><br>
+    <%= f.text_field :url_fb %>
+  </div>
+  <div class="field">
+    <%= f.label :url_linkedin %><br>
+    <%= f.text_field :url_linkedin %>
+  </div>
+  <div class="field">
+    <%= f.label :url_behance %><br>
+    <%= f.text_field :url_behance %>
+  </div>
+  <div class="field">
+    <%= f.label :url_bitbucket %><br>
+    <%= f.text_field :url_bitbucket %>
+  </div>
+  <div class="field">
+    <%= f.label :url_website %><br>
+    <%= f.text_field :url_website %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
