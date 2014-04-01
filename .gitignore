@@ -16,3 +16,15 @@
 /tmp
 /config/database.yml
 .env
+.ruby-gemset*
+.ruby-version*
+.rvmrc
+.rvmrc.back
+.DS_Store
+#db/schema.rb
+vendor/cache
+log/*.*
+*.tmp
+*_bak
+*~
+public/uploads
