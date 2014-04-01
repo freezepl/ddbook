@@ -23,32 +23,6 @@ ActiveRecord::Schema.define(version: 20131103214952) do
     t.datetime "updated_at"
   end
 
-  create_table "profiles", force: true do |t|
-    t.integer  "user_id"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.text     "desc"
-    t.string   "account_type"
-    t.string   "position"
-    t.string   "rate"
-    t.integer  "rate_min"
-    t.integer  "rate_max"
-    t.boolean  "for_freelance"
-    t.boolean  "for_hire"
-    t.string   "url_github"
-    t.string   "url_bitbucket"
-    t.string   "url_dribbble"
-    t.string   "url_fb"
-    t.string   "url_linkedin"
-    t.string   "url_behance"
-    t.string   "url_website"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "profiles", ["account_type"], name: "index_profiles_on_account_type", using: :btree
-  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
-
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -62,10 +36,28 @@ ActiveRecord::Schema.define(version: 20131103214952) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.text     "description"
+    t.integer  "account_type"
+    t.string   "job"
+    t.integer  "rate"
+    t.integer  "rate_min"
+    t.integer  "rate_max"
+    t.boolean  "freelance"
+    t.boolean  "hire"
+    t.text     "url_github"
+    t.text     "url_bitbucket"
+    t.text     "url_dribbble"
+    t.text     "url_fb"
+    t.text     "url_linkedin"
+    t.text     "url_behance"
+    t.text     "url_website"
     t.boolean  "profile_completed"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["account_type"], name: "index_users_on_account_type", using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
