@@ -4,13 +4,36 @@ ruby '2.1.1'
 
 gem 'rails', git: 'https://github.com/rails/rails.git', branch: '4-1-stable'
 
-gem 'devise', '~> 3.1.1'
+gem 'devise', '~> 3.2.4'
 gem 'nifty-generators'
 #oauth
 gem "omniauth"
 gem 'omniauth-linkedin'
 gem 'omniauth-github'
 gem "linkedin"
+
+gem 'sass-rails', '~> 4.0.1'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.1'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 1.2'
+gem 'normalize-rails'
+gem 'haml'
+gem 'bourbon'
+gem 'neat'
+gem 'html2haml'
+gem 'flat-ui-rails'
+
+group :production do
+  gem 'pg'
+  gem 'unicorn'
+  gem 'rails_12factor'
+end
+
+group :doc do
+  gem 'sdoc', require: false
+end
 
 group :development do
   # gem 'sqlite3'
@@ -23,48 +46,15 @@ group :development do
   gem 'dotenv-rails'
 end
 
-group :production do
-  gem 'pg'
-  gem 'unicorn'
-  gem 'rails_12factor'
+group :development, :test do
+  gem 'byebug'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara-webkit'
+  gem 'launchy'
+  gem 'database_cleaner'
+  gem 'mocha'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'pry'
 end
-
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
-
-# Front-End
-# Neat bourbon.io grid
-gem 'normalize-rails'
-gem 'haml'
-gem 'bourbon'
-gem 'neat'
-gem 'html2haml'
-gem "flat-ui-rails"
-
-gem "mocha", group: :test
